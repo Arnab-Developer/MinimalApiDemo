@@ -17,6 +17,7 @@
 	<ItemGroup>
 		<Using Include="Microsoft.AspNetCore.Builder" />
 		<Using Include="Api1.EndPoints" />
+		<Using Include="Lib1" />
 	</ItemGroup>
 
 </Project>
