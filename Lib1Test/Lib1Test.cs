@@ -1,6 +1,3 @@
-using Lib1;
-using Xunit;
-
 namespace Lib1Test;
 
 public class Lib1Test
