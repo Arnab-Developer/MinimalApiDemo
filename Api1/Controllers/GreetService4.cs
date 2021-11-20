@@ -6,7 +6,17 @@ namespace Api1.Controllers;
 [Route("[controller]")]
 public class GreetService4 : ControllerBase
 {
+    private readonly IGreetServiceLib _lib;
+
+    public GreetService4(IGreetServiceLib lib)
+    {
+        _lib = lib;
+    }
+
     [HttpGet]
-    public ActionResult<string> GetGreet4Message(string name) =>
-        Ok($"Hello {name}, this is greet 4 service.");
+    public ActionResult<string> GetGreet4Message(string name)
+    {
+        string msg = _lib.GetGreetMessage(name, 4);
+        return Ok(msg);
+    }
 }

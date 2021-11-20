@@ -15,14 +15,17 @@ public class Greet3Test
     [Fact]
     public async Task HappyPathTest()
     {
-        IGreetService3 greetService3 = new GreetService3();
-        IResult result = greetService3.GetGreet3Message("Test user");
+        Mock<IGreetServiceLib> greetServiceLibMock = new();
+        greetServiceLibMock.Setup(s => s.GetGreetMessage("Test User", 3)).Returns("Test response");
+
+        IGreetService3 greetService3 = new GreetService3(greetServiceLibMock.Object);
+        IResult result = greetService3.GetGreet3Message("Test User");
         HttpContext mockHttpContext = CreateMockHttpContext();
         await result.ExecuteAsync(mockHttpContext);
         mockHttpContext.Response.Body.Position = 0;
         using StreamReader reader = new(mockHttpContext.Response.Body, Encoding.UTF8);
 
-        Assert.Equal("\"Hello Test user, this is greet 3 service.\"", reader.ReadToEnd());
+        Assert.Equal("\"Test response\"", reader.ReadToEnd());
         Assert.Equal(200, mockHttpContext.Response.StatusCode);
     }
 }
