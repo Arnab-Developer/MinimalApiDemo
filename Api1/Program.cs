@@ -11,5 +11,6 @@ if (app.Environment.IsDevelopment())
 }
 app.UseAuthorization();
 app.MapControllers();
+app.MapGet("greet1", (string name) => $"Hello {name}, this is greet 1 service.");
 
 app.Run();
