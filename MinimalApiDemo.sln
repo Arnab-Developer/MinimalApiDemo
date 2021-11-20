@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api1", "Api1\Api1.csproj", "{B82BAEFA-A2C7-435A-9AE5-68DC90EB80A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1", "Api1\Api1.csproj", "{B82BAEFA-A2C7-435A-9AE5-68DC90EB80A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api1Test", "Api1Test\Api1Test.csproj", "{862F722F-E218-429D-9876-E025CDD99436}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api1Test", "Api1Test\Api1Test.csproj", "{862F722F-E218-429D-9876-E025CDD99436}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92AE514A-7D06-4A22-9620-ADE380690BE8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
